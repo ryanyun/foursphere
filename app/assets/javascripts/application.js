@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require Detector
+//= require Tween
+//= require three.min
+//= require globe
 //= require_tree .

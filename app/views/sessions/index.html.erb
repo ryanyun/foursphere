@@ -1,6 +1,30 @@
-<% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
-<% else %>
-  <%= link_to "Sign in with Foursquare", "/auth/foursquare" %>
-<% end %>
+<div id="container"></div>
+
+<div id="info">
+  <% if current_user %>Welcome <strong><%= current_user.name %></strong>! <span class="bull">&bull;</span> <%= link_to "Sign Out", signout_path %><% else %><%= link_to "Sign in with Foursquare", "/auth/foursquare" %><% end %>
+</div>
+
+<div id="currentInfo">
+  <span id="year1990" class="year">1990</span>
+  <span id="year1995" class="year">1995</span>
+  <span id="year2000" class="year">2000</span>
+</div>
+
+<div id="title">
+  World Population
+</div>
+
+<script type="text/javascript">
+  // Where to put the globe?
+  var container = document.getElementById( 'container' );
+  // Make the globe
+  var globe = new DAT.Globe( container );
+  // Parse the JSON
+  var data = JSON.parse( gon.data );
+  // Tell the globe about your JSON data
+  globe.addData( data[0][1], {format: 'magnitude', name: data[0][0]} );
+  // Create the geometry
+  globe.createPoints();
+  // Begin animation
+  globe.animate();
+</script>
