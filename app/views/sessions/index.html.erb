@@ -8,7 +8,7 @@
   <% if current_user %>
     <span><%= link_to "Log Out", signout_path %></span>
   <% else %>
-    <% if notice %><span><%= notice %> <span class="bull">&bull;</span></span><% elsif alert %><span><%= alert %></span> <span class="bull">&bull;</span><% end %><span><%= link_to "Log in with Foursquare", "/auth/foursquare" %></span>
+    <% if notice %><span><%= notice %><br></span><% elsif alert %><span><%= alert %><br></span><% end %><span><%= link_to "Log in with Foursquare", "/auth/foursquare" %></span>
   <% end %>
 </div>
 
