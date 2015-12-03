@@ -30,4 +30,8 @@ class SessionsController < ApplicationController
     session[:tk] = nil
     redirect_to root_url, :notice => "Signed out!"
   end
+  
+  def failure
+    redirect_to root_path, alert: "Authentication failed, please try again."
+  end
 end
