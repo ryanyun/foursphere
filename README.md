@@ -6,7 +6,14 @@ Foursphere allows users to visualize their checkins with an interactive globe. T
 
 ## Screenshots
 
-![Foursphere](screenshots/foursphere.png "Bar sizes are proportional to checkin count")
+![foursphere-1](screenshots/foursphere-1.png "Bar sizes are proportional to checkin count")
+Bar sizes are proportional to checkin count
+
+![foursphere-2](screenshots/foursphere-2.gif "Drag your mouse to spin the globe")
+Drag your mouse to spin the globe
+
+![foursphere-3](screenshots/foursphere-3.gif "Scroll to zoom for higher detail")
+Scroll to zoom for higher detail
 
 ## Background
 
