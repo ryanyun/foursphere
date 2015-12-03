@@ -1,30 +1,45 @@
 <div id="container"></div>
 
 <div id="info">
-  <% if current_user %>Welcome <strong><%= current_user.name %></strong>! <span class="bull">&bull;</span> <%= link_to "Sign Out", signout_path %><% else %><%= link_to "Sign in with Foursquare", "/auth/foursquare" %><% end %>
+  Made with <i class="fa fa-heart"></i> in NYC by <a href="http://ryanyun.nyc">Ryan Yun</a> <span class="bull">&bull;</span> Check out the source code on <a href="https://github.com/ryannyunn/foursphere">Github</a> <span class="bull">&bull;</span> Follow me on <a href="https://foursquare.com/ryanthemyanlion">Foursquare</a>
 </div>
 
 <div id="currentInfo">
-  <span id="year1990" class="year">1990</span>
-  <span id="year1995" class="year">1995</span>
-  <span id="year2000" class="year">2000</span>
+  <% if current_user %>
+    <span><%= link_to "Log Out", signout_path %></span>
+  <% else %>
+    <span><%= link_to "Log in with Foursquare", "/auth/foursquare" %></span>
+  <% end %>
 </div>
 
 <div id="title">
-  World Population
+  <i class="fa fa-foursquare"></i> <% if current_user %><strong><%= current_user.name %></strong>'s checkins<% else %>Foursphere<% end %>
 </div>
 
-<script type="text/javascript">
-  // Where to put the globe?
-  var container = document.getElementById( 'container' );
-  // Make the globe
-  var globe = new DAT.Globe( container );
-  // Parse the JSON
-  var data = JSON.parse( gon.data );
-  // Tell the globe about your JSON data
-  globe.addData( data[0][1], {format: 'magnitude', name: data[0][0]} );
-  // Create the geometry
-  globe.createPoints();
-  // Begin animation
-  globe.animate();
-</script>
+<% if current_user %>
+  <script type="text/javascript">
+    // Where to put the globe?
+    var container = document.getElementById( 'container' );
+    // Make the globe
+    var globe = new DAT.Globe( container );
+    // Parse the JSON
+    var data = JSON.parse( gon.data );
+    // Tell the globe about your JSON data
+    globe.addData( data[0][1], {format: 'magnitude', name: data[0][0]} );
+    // Create the geometry
+    globe.createPoints();
+    // Begin animation
+    globe.animate();
+  </script>
+<% else %>
+  <script type="text/javascript">
+    // Where to put the globe?
+    var container = document.getElementById( 'container' );
+    // Make the globe
+    var globe = new DAT.Globe( container );
+    // Create the geometry
+    globe.createPoints();
+    // Begin animation
+    globe.animate();
+  </script>
+<% end %>
