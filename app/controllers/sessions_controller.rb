@@ -3,13 +3,13 @@ class SessionsController < ApplicationController
   def index
     if current_user
       data = [['checkins', []]]
-      n = JSON.parse(open("https://api.foursquare.com/v2/users/self/checkins?oauth_token=#{session[:tk]}&v=20151202").read)['response']['checkins']['count'] / 250 + 1
+      n = JSON.parse(open("https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=#{session[:tk]}&v=20151202").read)['response']['venues']['count'] / 250 + 1
       pg = 0
       while pg < n
-        JSON.parse(open("https://api.foursquare.com/v2/users/self/checkins?oauth_token=#{session[:tk]}&v=20151202&limit=250&offset=#{pg * 250}").read)['response']['checkins']['items'].each do |c|
+        JSON.parse(open("https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=#{session[:tk]}&v=20151202&limit=250&offset=#{pg * 250}").read)['response']['venues']['items'].each do |c|
           data.first.last << c['venue']['location']['lat']
           data.first.last << c['venue']['location']['lng']
-          data.first.last << 0.5
+          data.first.last << c['beenHere'] * 0.1
         end
         pg += 1
       end
