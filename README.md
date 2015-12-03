@@ -23,4 +23,4 @@ Please feel free to contribute to this project.
 
 ## License
 
-Foursphere is MIT Licensed.
+Foursphere is MIT Licensed. See LICENSE for details.
