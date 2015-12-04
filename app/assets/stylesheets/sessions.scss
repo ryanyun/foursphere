@@ -1,3 +1,79 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000 center center no-repeat;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  height: 100%;
+}
+
+#info {
+
+  font-size: 11px;
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 3px;
+  right: 10px;
+  padding: 10px;
+
+}
+
+#currentInfo {
+  width: 270px;
+  position: absolute;
+  left: 20px;
+  top: 63px;
+
+  background-color: rgba(0,0,0,0.2);
+
+  border-top: 1px solid rgba(255,255,255,0.4);
+  padding: 10px;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.bull {
+  padding: 0 5px;
+  color: #555;
+}
+
+#title {
+  position: absolute;
+  top: 20px;
+  width: 270px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  font: 20px Georgia;
+  padding: 10px;
+}
+
+#ce span {
+  display: none;
+}
+
+#ce {
+  width: 107px;
+  height: 55px;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: url("/assets/ce-c334dcb598b9f8a6648860e6ccdb8f8dff0bc994cd1352efc1433996c75375b8.png")
+}

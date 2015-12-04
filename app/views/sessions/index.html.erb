@@ -10,6 +10,7 @@
   <% else %>
     <% if notice %><span><%= notice %><br></span><% elsif alert %><span><%= alert %><br></span><% end %><span><%= link_to "Log in with Foursquare", "/auth/foursquare" %></span>
   <% end %>
+  <span class="bull">&bull;</span> <%= link_to "About", about_path %>
 </div>
 
 <div id="title">
