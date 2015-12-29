@@ -17,7 +17,7 @@ Scroll to zoom for higher detail
 
 ## Background
 
-I'm a die-hard [Foursquare](https://foursquare.com/) user & I love data visualization. Why not have the best of both worlds?
+I'm a die-hard [Foursquare user](https://foursquare.com/_ryanyun) & I love data visualization. Why not have the best of both worlds?
 
 ## Features
 
