@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/ryannyunn/foursphere/badges/gpa.svg)](https://codeclimate.com/github/ryannyunn/foursphere)
+* * *
 # Foursphere
 
 ## Description
